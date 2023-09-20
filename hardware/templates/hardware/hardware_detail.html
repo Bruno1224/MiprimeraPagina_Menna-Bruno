@@ -1,0 +1,15 @@
+{% extends "home/index.html" %}
+{% load static %}
+{% block coderhouse_project_content %}
+
+<p><a class="btn2 btn-danger" href="{% url 'hardware:hardware-list' %}">Regresar</a></p>
+<hr></hr>
+
+<p><h3>Hardware: {{ hardware.name }}</h3></p>
+<p><h5>Categoría: {{ hardware.category }}</h5></p>
+<h5>Descripción:</h5>
+<p><textarea readonly rows="7" cols="90" >{{ hardware.description }}</textarea></p>
+
+<hr></hr>
+<p><a class="btn2 btn-danger" href="{% url 'hardware:hardware-list' %}">Regresar</a></p>
+{% endblock %}

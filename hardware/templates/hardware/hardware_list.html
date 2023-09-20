@@ -1,0 +1,31 @@
+{% extends "home/index.html" %}
+{% load static %}
+{% block coderhouse_project_content %}
+
+<h2>Lista de Hardwares</h2>
+{% if user.is_superuser %}
+<a class="card_custom" href="{% url 'hardware:hardware-add' %}">Crear nuevo Hardware</a>
+{% endif %}
+<hr></hr>
+<ul>
+    {% for hardware in hardware_list %}
+    <li>
+        {{hardware}}
+
+            <a href="{% url 'hardware:hardware-detail' hardware.id %}">
+                <button type="button" class="btn btn-outline-primary btn-sm fa fa-eye" style="color: rgb(255, 255, 255);"></button>
+            </a>
+        {% if user.is_superuser %}
+        <a href="{% url 'hardware:hardware-update' hardware.id %}">
+            <button type="button" class="btn btn-outline-warning btn-sm fa fa-pencil" style="color: rgb(255, 255, 255);"></button>
+        </a>
+        <a href="{% url 'hardware:hardware-delete' hardware.id %}">
+            <button type="button" class="btn btn-outline-danger btn-sm fa fa-trash" style="color: rgb(255, 255, 255);"></button>
+        </a>
+        
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

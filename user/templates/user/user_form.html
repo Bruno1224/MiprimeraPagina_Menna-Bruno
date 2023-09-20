@@ -1,0 +1,23 @@
+{% extends "home/index.html" %}
+{% load static %}
+{% block coderhouse_project_content %}
+
+<h2>Editar Perfil</h2>
+<hr></hr>
+<h5>Usuario: {{user.username}}</h5>
+
+<div class="text-right">
+    <img height="160px" src="{{url}}" alt="img">
+
+    <a href="{% url 'user:avatar-load' %}">
+        <button type="button" class="btn btn-outline-warning fa fa-pencil">Cambiar Avatar</button>
+    </a>
+
+<br><br>
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" class="btn btn-danger" value="Guardar Usuario" />
+</form>
+
+{% endblock %}

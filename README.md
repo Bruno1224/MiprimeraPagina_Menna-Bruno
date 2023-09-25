@@ -1,19 +1,3 @@
-Mariano Luis Zavagna: Cambié el tema del proyecto base, la imagen de fondo y los botones, agregué el about, 
-<br>
-politicas y condiciones de la página, realicé la sección de comentarios en "Discusiones generales", adapté 
-<br>
-el bucador de inicio para que busque "Discuciones generales" y creé una página para el error 404
-<br>
-
-# Instrucciones para ejecutar este proyecto
-
-- Clonar el proyecto
-```bash
-git clone https://github.com/MarianoZavagna/EntregaFinal_Zavagna.git
-
-cd EntregaFinal_Zavagna
-```
-
 - Crear y activar entorno virtual (Windows)
 ```bash
 C:\>python -m venv c:\ruta\al\entorno\virtual
